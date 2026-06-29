@@ -898,11 +898,10 @@ section:nth-child(even) { background: var(--bg-alt); }
 }
 .contact-links {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.contact-links .btn-primary { font-size: 16px; padding: 16px 44px; }
-.contact-links .btn-ghost   { font-size: 16px; padding: 16px 44px; }
 
 /* ─── Footer ────────────────────────────────────────────────── */
 footer {
