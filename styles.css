@@ -945,15 +945,7 @@ footer {
     margin-bottom: 24px;
     line-height: 1.55;
   }
-  /* stack CTAs, full-width */
-  .hero-cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  .hero-cta .btn-primary,
-  .hero-cta .btn-ghost { text-align: center; }
+  .hero-cta { margin-bottom: 20px; }
   /* badges: single row, allow scroll — hide overflow to keep it clean */
   .hero-badges {
     flex-wrap: nowrap;
