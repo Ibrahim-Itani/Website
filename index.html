@@ -7,10 +7,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
-  <!-- Critical: drawer must be off-screen before styles.css parses -->
+  <!-- Critical layout: applied before styles.css parses so nothing flashes wrong -->
   <style>
-    #side-drawer   { position:fixed; top:0; right:0; height:100%; transform:translateX(110%); z-index:960; display:flex; flex-direction:column; }
-    #drawer-overlay{ position:fixed; inset:0; z-index:950; opacity:0; pointer-events:none; }
+    /* drawer always off-screen until JS opens it */
+    #side-drawer    { position:fixed; top:0; right:0; height:100%; transform:translateX(110%); z-index:960; display:flex; flex-direction:column; }
+    #drawer-overlay { position:fixed; inset:0; z-index:950; opacity:0; pointer-events:none; }
+    /* hero content must never exceed viewport width */
+    .hero-content   { width:100%; box-sizing:border-box; }
+    /* avatar circle — prevents raw img from stretching full-width */
+    .hero-avatar    { width:128px; height:128px; border-radius:50%; overflow:hidden; margin:0 auto 28px; flex-shrink:0; }
+    .headshot-img   { width:100%; height:100%; object-fit:cover; object-position:center 8%; display:block; }
+    @media (max-width:480px) {
+      .hero-avatar  { width:96px; height:96px; }
+    }
   </style>
 </head>
 <body>
