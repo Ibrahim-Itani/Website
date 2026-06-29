@@ -4,6 +4,38 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 10);
 }, { passive: true });
 
+/* ── Side drawer ─────────────────────────────────────────────── */
+const menuBtn       = document.getElementById('menu-btn');
+const sideDrawer    = document.getElementById('side-drawer');
+const drawerOverlay = document.getElementById('drawer-overlay');
+const drawerClose   = document.getElementById('drawer-close');
+
+function openDrawer() {
+  sideDrawer.classList.add('open');
+  drawerOverlay.classList.add('open');
+  menuBtn.classList.add('open');
+  sideDrawer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+function closeDrawer() {
+  sideDrawer.classList.remove('open');
+  drawerOverlay.classList.remove('open');
+  menuBtn.classList.remove('open');
+  sideDrawer.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+menuBtn.addEventListener('click', openDrawer);
+drawerClose.addEventListener('click', closeDrawer);
+drawerOverlay.addEventListener('click', closeDrawer);
+document.querySelectorAll('.drawer-link').forEach(a =>
+  a.addEventListener('click', closeDrawer)
+);
+// close on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeDrawer();
+});
+
 /* ── Smooth active link highlighting ────────────────────────── */
 const sections = document.querySelectorAll('section[id]');
 const navAs    = document.querySelectorAll('.nav-links a');

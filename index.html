@@ -13,7 +13,7 @@
   <!-- ── Navigation ── -->
   <nav id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">II</a>
+      <a href="#" class="nav-logo">Ibrahim</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -23,8 +23,32 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#contact" class="nav-cta">Connect</a>
+      <button class="menu-btn" id="menu-btn" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+
+  <!-- ── Side Drawer ── -->
+  <div id="drawer-overlay"></div>
+  <aside id="side-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <span class="drawer-wordmark">Ibrahim Itani</span>
+      <button class="drawer-close" id="drawer-close" aria-label="Close navigation">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#about"        class="drawer-link"><span class="drawer-num">01</span>About</a>
+      <a href="#experience"   class="drawer-link"><span class="drawer-num">02</span>Experience</a>
+      <a href="#skills"       class="drawer-link"><span class="drawer-num">03</span>Skills</a>
+      <a href="#education"    class="drawer-link"><span class="drawer-num">04</span>Education</a>
+      <a href="#publications" class="drawer-link"><span class="drawer-num">05</span>Publications</a>
+      <a href="#contact"      class="drawer-link"><span class="drawer-num">06</span>Contact</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="https://linkedin.com/in/ibrahim-itani" class="drawer-cta" target="_blank" rel="noopener">Connect on LinkedIn &rarr;</a>
+      <p class="drawer-tagline">AI &amp; Data Consultant &nbsp;&middot;&nbsp; PhD &nbsp;&middot;&nbsp; EY</p>
+    </div>
+  </aside>
 
   <!-- ── Hero ── -->
   <section id="hero">
