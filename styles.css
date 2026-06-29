@@ -91,6 +91,50 @@ body {
 }
 .nav-cta:hover { background: #1a7de0; }
 
+/* ─── Hero avatar ───────────────────────────────────────────── */
+.hero-avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 28px;
+  /* layered ring: accent glow + subtle border */
+  box-shadow:
+    0 0 0 3px rgba(41,151,255,.35),
+    0 0 0 6px rgba(41,151,255,.10),
+    0 24px 48px rgba(0,0,0,.55);
+  opacity: 0;
+  transform: translateY(16px) scale(.95);
+  animation: fadeUp .7s ease 0s forwards;
+  flex-shrink: 0;
+}
+.headshot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 8%;   /* keeps face centred in the circle */
+  display: block;
+}
+
+/* ─── Schedule button ───────────────────────────────────────── */
+.btn-schedule {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  border: 1px solid rgba(41,151,255,.5);
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .2s, border-color .2s, transform .2s;
+}
+.btn-schedule:hover {
+  background: rgba(41,151,255,.12);
+  border-color: var(--accent);
+  transform: scale(1.03);
+}
+
 /* ─── Hamburger button ──────────────────────────────────────── */
 .menu-btn {
   display: none;
@@ -929,6 +973,7 @@ footer {
 
 /* ── Compact mobile hero ── */
 @media (max-width: 480px) {
+  .hero-avatar { width: 96px; height: 96px; margin-bottom: 20px; }
   .about-stats { grid-template-columns: 1fr; }
   .focus-grid  { grid-template-columns: 1fr; }
 
