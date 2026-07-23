@@ -886,8 +886,31 @@ section:nth-child(even) { background: var(--bg-alt); }
   color: var(--text-2);
 }
 
+/* ─── Assistant ─────────────────────────────────────────────── */
+.assistant-sub {
+  font-size: 17px;
+  color: var(--text-2);
+  line-height: 1.7;
+  max-width: 620px;
+  margin: -40px 0 40px;
+}
+.assistant-frame {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 680px;
+}
+.assistant-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 /* ─── Contact ───────────────────────────────────────────────── */
-#contact { text-align: center; }
+/* pinned to --bg: the new Assistant section shifted its nth-child parity */
+#contact { text-align: center; background: var(--bg); }
 .contact-wrap { max-width: 680px; }
 .contact-sub {
   font-size: 19px;
@@ -967,6 +990,7 @@ footer {
   .awards-grid { grid-template-columns: 1fr; }
   .award-featured { grid-column: auto; }
   .pub-card    { grid-template-columns: 1fr; gap: 8px; }
+  .assistant-frame { height: 560px; }
   .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
 }
 
